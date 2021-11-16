@@ -16,6 +16,6 @@ jobs:
 
       - name: Enable workflow
         run: |
-          gh workflow list | awk '{print $3}' | xargs -i gh workflow enable {}
+          gh workflow list | awk '{print $NF}' | xargs -i gh workflow enable {}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
