@@ -18,4 +18,4 @@ jobs:
         run: |
           gh workflow list | awk '{print $3}' | xargs -i gh workflow enable {}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_ADMIN_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
