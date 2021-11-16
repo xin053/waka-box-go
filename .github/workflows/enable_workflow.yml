@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: 'https://github.com/xin053/actions'
+          repository: 'xin053/actions'
 
       - name: Enable workflow
         run: gh workflow list | awk '{print $1}' | xargs -i gh workflow enable {}
