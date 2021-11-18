@@ -11,11 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          repository: 'xin053/actions'
 
       - name: Enable workflow
         run: |
           gh workflow list | awk '{print $NF}' | xargs -i gh workflow enable {}
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_ADMIN_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
